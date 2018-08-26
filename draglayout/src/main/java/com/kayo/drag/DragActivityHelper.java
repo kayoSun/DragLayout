@@ -30,7 +30,7 @@ public class DragActivityHelper {
         mDragLayout.attachToActivity(mActivity);
     }
 
-    public View findViewById(int id) {
+    public  <T extends View> T findViewById(int id) {
         if (mDragLayout != null) {
             return mDragLayout.findViewById(id);
         }

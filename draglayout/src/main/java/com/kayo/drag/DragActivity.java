@@ -27,11 +27,11 @@ public class DragActivity extends AppCompatActivity implements DragInterface {
     }
 
     @Override
-    public View findViewById(int id) {
+    public  <T extends View> T  findViewById(int id) {
         View v = super.findViewById(id);
         if (v == null && mHelper != null)
             return mHelper.findViewById(id);
-        return v;
+        return (T) v;
     }
 
     @Override
